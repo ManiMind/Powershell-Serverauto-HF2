@@ -1,0 +1,1 @@
+Import-Csv "C:\Users\Administrator\CSV files\UserCSV.txt" -Delimiter ";" | Format-Table

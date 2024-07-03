@@ -1,0 +1,1 @@
+Disable-ADAccount -Identity Justice

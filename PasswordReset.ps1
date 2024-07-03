@@ -1,0 +1,1 @@
+Set-ADAccountPassword -Identity (Read-Host "Enter SamAccountName")
