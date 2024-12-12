@@ -1,5 +1,5 @@
 # Laver en variabel ud fra CSV fil
-$ADUsers = Import-Csv "C:\Users\Administrator\CSV files\UserCSV.txt" -Delimiter ";"
+$ADUsers = Import-Csv "C:\Users\Administrator\CSV files\UserCSV.csv" -Delimiter ";"
 
 # Definerer UPN
 $UPN = "G4AD.H2.SKYLAB.ACADEMY"
@@ -11,7 +11,7 @@ foreach ($User in $ADUsers) {
             SamAccountName      = $User.username
             UserPrincipalName   = "$($User.username)@$UPN"
             Name                = "$($User.firstname) $($User.lastname)"
-            Giveame             = $User.lastname
+            GivenName             = $User.lastname
             Initial             = $User.initials
             Enabled             = $true
             DisplayName         = "$($User.firstname) $($User.lastname)"
